@@ -6,6 +6,7 @@ services:
     image: "mcr.microsoft.com/devcontainers/javascript-node:0-20"
     volumes: 
       - sqlitedb:/etc/todos/todo.db
+    command: /bin/sh -c "while sleep 1000; do :; done"
 
 volumes:
   sqlitedb:
